@@ -1,0 +1,27 @@
+<div class="container">
+    <h1>Fetching Data from JSON</h1>
+  
+    <a routerLink="/create" class="btn btn-success">Create New Post</a>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic perferendis sequi laborum deleniti cupiditate. Magnam adipisci reprehenderit nobis. Enim, quas.</p>
+    
+    <table class="table table-bordered">
+      <tr>
+        <th>ID</th>
+        <th>Title</th>
+        <th>Body</th>
+        <th>Action</th>
+      </tr>
+      <tr *ngFor="let post of posts">
+        <td>{{ post.id }}</td>
+        <td>{{ post.title }}</td>
+        <td>{{ post.body }}</td>
+        <td>
+          <button type="button" (click)="deletePost(post.id)" class="btn btn-danger">Delete</button>
+        </td>
+      </tr>
+    </table>
+
+ </div>
+
+
+
